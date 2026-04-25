@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "skills": {
+    "ai-prompt-engineering-safety-review": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "81bf64d383cb7a6c06d252f6b1097c40a161b1968b05204fffeacc395fda1ae9"
+    },
+    "architecture-review": {
+      "source": "srstomp/pokayokay",
+      "sourceType": "github",
+      "computedHash": "f6e093f62f6233c3de305220cb41d9ca9649f816c8089a9ec26f7fe677384916"
+    },
+    "code-review-excellence": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "0f585a4ad2f6d8353069ca9051c6f0e8865abb9d3a6a268d423784c3c3852962"
+    },
+    "data-pipeline": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "computedHash": "4b8676f77ee0a054f4e39c356f273eabd74fe23db86177d8a48c1af78400b4f3"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "computedHash": "9e1c8b3103f92fa8092568a44fe64858de7c5c9dc65ce4bea8f168080e889cfd"
+    },
+    "mentoring-juniors": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "ea3d12e594aea60a35cf174be77bf9efcc6c3c17483c4560966b945102dfc44a"
+    },
+    "prd": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "1f3e1f005fc40fda85d250ae906c8ee4f7e8e833e23adfeca6542c19609fd7cd"
+    },
+    "proactive-agent": {
+      "source": "halthelobster/proactive-agent",
+      "sourceType": "github",
+      "computedHash": "05da068bbc7c8ba1ba27356d67d8dd16c9bad14d2f05d8568128636b18d60739"
+    },
+    "prompt-engineering-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "4a8810c06525c95fd9370fdb3311d969fc89a53a196fe500b5b4f8529b21c9a7"
+    },
+    "python-project-structure": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "2f4f560964af8ecad4d54666c044baa54671d0abd1136c848b539befe24db170"
+    },
+    "scope-check": {
+      "source": "donchitos/claude-code-game-studios",
+      "sourceType": "github",
+      "computedHash": "ed119190fea90dc3c4896db901d73d0c8b5afc27c282894fa12152c313c9e43e"
+    },
+    "to-issues": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "computedHash": "2db47f0db7e6975486cd28bc6744f1358b47a434fb98df5b6ad507b6c3685b6a"
+    },
+    "to-prd": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "computedHash": "8351452ad372ea4f839d3f7b951927b417851ffa49e7e6af28ea0f0ae111dca8"
+    }
+  }
+}
