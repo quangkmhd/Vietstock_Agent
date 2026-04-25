@@ -1,133 +1,87 @@
 # Data Requirements: Production-Grade VN Market Data Pipeline
 
 ## 1. Dữ liệu cần thu thập
-Để phục vụ hệ thống Multi-Agent Financial Advisor, cần thu thập 3 nhóm dữ liệu lõi cho mỗi doanh nghiệp:
+Để phục vụ hệ thống Multi-Agent Financial Advisor, cần thu thập 5 nhóm dữ liệu lõi cho mỗi doanh nghiệp và thị trường:
 1. **Historical Price (OHLCV)**: Giá open, high, low, close, volume hàng ngày.
-2. **Fundamental Data (Thông tin doanh nghiệp)**: 
+2. **Intraday & Cash Flow Data**: 
+   - Giao dịch khớp lệnh chi tiết (Intraday).
+   - Dữ liệu dòng tiền khối ngoại (Foreign Flow).
+   - Dữ liệu dòng tiền tự doanh (Prop-trading Flow).
+3. **Fundamental Data (Thông tin doanh nghiệp)**: 
    - Thông tin tổng quan (Overview): Số cổ phiếu phát hành, vốn điều lệ, mô hình kinh doanh.
    - Cấu trúc cổ đông (Shareholders) và Cấu trúc sở hữu (Ownership).
    - Ban lãnh đạo (Officers).
    - Công ty con (Subsidiaries).
    - Lịch sử thay đổi vốn (Capital History).
    - Giao dịch nội bộ (Insider Trading).
-3. **Financial Data (Dữ liệu tài chính)**: 
+4. **Financial Data (Dữ liệu tài chính)**: 
    - Báo cáo kết quả kinh doanh (Income Statement).
    - Bảng cân đối kế toán (Balance Sheet).
    - Báo cáo lưu chuyển tiền tệ (Cash Flow).
    - Chỉ số tài chính (Ratio).
    - *Chu kỳ*: Lấy theo cả Quý (Quarter) và Năm (Year).
-4. **Events & News**: 
-   - Tin tức doanh nghiệp.
+5. **Events & News**: 
+   - Tin tức doanh nghiệp (được làm sạch HTML rác, lưu định dạng Markdown kèm Metadata).
    - Sự kiện doanh nghiệp (Trả cổ tức, phát hành thêm...).
+   - Sự kiện vĩ mô thị trường (Market Events: ngày nghỉ lễ, nghẽn lệnh hệ thống từ năm 2000).
 
 ## 2. Nguồn dữ liệu (Source)
-Sử dụng thư viện `vnstock` v3.4.0+.
+Sử dụng thư viện `vnstock` v3.4.0+ (hệ sinh thái mới, ưu tiên Vnstock News, Market Events, TA).
 - Nguồn mặc định ưu tiên: **KBS** (Khuyến nghị, ổn định hơn cho batch processing, có dữ liệu chi tiết).
-- Nguồn dự phòng (Fallback): **VCI** (Sẽ được gọi khi KBS trả về rỗng, lỗi, hoặc không hỗ trợ, vd: `events`, `subsidiaries`).
+- Nguồn dự phòng (Fallback): **VCI** hoặc **DNSE** cho các trường hợp đặc thù (VD: Intraday, News).
 - Các hàm tương ứng:
-  - Giá: `Quote(source="KBS").history()`
-  - Thông tin: `Company(source="KBS").overview()`, `shareholders()`, `ownership()`, vv.
-  - Tài chính: `Finance(source="KBS").income_statement(display_mode="all")`, vv.
+  - Giá/Flow: `Quote().history()`, `Quote().intraday()`, `StockTrading().foreign()`, `StockTrading().prop_trading()`.
+  - Thông tin: `Company().overview()`, vv.
+  - Tài chính: `Finance().income_statement()`, vv.
+  - Tin tức: `Company().news()` lấy Markdown.
 
 ## 3. Coverage (Phạm vi dữ liệu)
-- **Timeframe**: Từ năm 2000 (tương đương `length="25Y"`) đến thời điểm hiện tại.
+- **Timeframe**: 
+  - Fundamental/Price: Từ năm 2000 (tương đương `length="25Y"`) đến thời điểm hiện tại.
+  - Intraday/Flow/News: Tùy thuộc vào giới hạn api của nhà cung cấp (thường vài năm gần nhất).
 - **Tickers (10 mã đại diện)**: `FPT`, `HPG`, `VCB`, `MBB`, `TCB`, `VNM`, `VIC`, `SSI`, `VND`, `MWG`. (Đây là các mã Bluechip có dữ liệu lịch sử đầy đủ và ổn định).
 
 ## 4. Schema Definition
 
-Do lưu trữ raw data từ `vnstock`, schema sẽ tương ứng với dataframe trả về. Một số field quan trọng:
+Do lưu trữ raw data từ `vnstock`, schema sẽ tương ứng với dataframe trả về. Một số field bổ sung quan trọng:
 
-### 4.1. Historical Price (OHLCV)
-- `time` (string/date): Thời gian giao dịch (VD: `2024-12-17`) - Not null
-- `open` (float): Giá mở cửa - Not null
-- `high` (float): Giá cao - Not null
-- `low` (float): Giá thấp - Not null
-- `close` (float): Giá đóng cửa - Not null
-- `volume` (int): Khối lượng khớp - Not null
+### 4.1. Dòng tiền (Foreign/Prop-trading)
+- `time` / `date` (string/date): Ngày giao dịch.
+- `net_buy_value` / `net_sell_value` (float): Giá trị mua/bán ròng.
+- `net_buy_volume` / `net_sell_volume` (int): Khối lượng mua/bán ròng.
 
-### 4.2. Company Overview
-- `symbol` (string): Mã CK - Not null
-- `founded_date` (string): Ngày thành lập - Nullable
-- `charter_capital` (int): Vốn điều lệ - Nullable
-- `exchange` (string): Sàn (HOSE/HNX/UPCOM) - Nullable
-- `business_model` (string): Mô tả - Nullable
-
-### 4.3. Financial Statements (All mode)
-- `item` (string): Tên chỉ tiêu (VN) - Not null
-- `item_en` (string): Tên chỉ tiêu (EN) - Nullable
-- `item_id` (string): ID chuẩn hóa - Not null
-- `periods` (float): Các cột năm/quý tương ứng (vd `2024`, `2024-Q1`) - Nullable
-
-### 4.4. Events
-- `id` (int/string): Event ID
-- `event_title` (string): Tiêu đề
-- `public_date` (string): Ngày công bố
-- `event_list_code` (string): Loại sự kiện (DIV, ISS...)
+### 4.2. News (Markdown Format)
+- `id` (string): ID bài viết.
+- `title` (string): Tiêu đề.
+- `publish_date` (string): Ngày xuất bản.
+- `content` (string): Nội dung Markdown đã làm sạch.
+- `source` (string): Nguồn (CafeF, Vietstock...).
 
 ## 5. Data Format
 - **Raw format khi crawl**: Pandas DataFrame.
-- **Format lưu trữ**: `Parquet` (Giữ nguyên schema, dung lượng tối ưu, tốc độ đọc/ghi nhanh cho pipeline). File metadata/log sẽ lưu dưới dạng `JSON`.
+- **Format lưu trữ**: `Parquet` cho data bảng (Price, Flow, Finance, Fundamental), `JSON/JSONL` cho Tin tức (News) và Sự kiện (Market Events) để giữ định dạng văn bản tốt nhất. File metadata/log sẽ lưu dưới dạng `JSON`.
 
 ## 6. Storage Design
 Dữ liệu được tổ chức trên disk (Local Data Lake) theo partition ticker và loại dữ liệu:
 ```text
-data_lake/
+data/data_lake/
 └── raw/
     ├── price/
     │   └── history/
-    │       └── {ticker}.parquet
+    ├── flow/
+    │   ├── foreign/
+    │   ├── prop_trading/
+    │   └── intraday/
     ├── company/
-    │   ├── overview/
-    │   │   └── {ticker}.parquet
-    │   ├── officers/
-    │   │   └── {ticker}.parquet
-    │   ├── shareholders/
-    │   │   └── {ticker}.parquet
-    │   ├── ownership/
-    │   │   └── {ticker}.parquet
-    │   ├── subsidiaries/
-    │   │   └── {ticker}.parquet
-    │   ├── affiliate/
-    │   │   └── {ticker}.parquet
-    │   ├── news/
-    │   │   └── {ticker}.parquet
-    │   ├── events/
-    │   │   └── {ticker}.parquet
-    │   ├── capital_history/
-    │   │   └── {ticker}.parquet
-    │   └── insider_trading/
-    │       └── {ticker}.parquet
-    └── finance/
-        ├── income_statement_year/
-        │   └── {ticker}.parquet
-        ├── income_statement_quarter/
-        │   └── {ticker}.parquet
-        ├── balance_sheet_year/
-        │   └── {ticker}.parquet
-        ├── balance_sheet_quarter/
-        │   └── {ticker}.parquet
-        ├── cash_flow_year/
-        │   └── {ticker}.parquet
-        ├── cash_flow_quarter/
-        │   └── {ticker}.parquet
-        ├── ratio_year/
-        │   └── {ticker}.parquet
-        └── ratio_quarter/
-            └── {ticker}.parquet
+    ├── finance/
+    ├── news/
+    │   └── {ticker}.jsonl
+    └── market_events/
+        └── vn_market_events.json
 ```
 
-## 7. Data Volume Estimation
-- **10 tickers, 25 năm**:
-  - `price`: ~6,250 records/ticker → 62,500 records tổng cộng (~2MB).
-  - `finance`: ~150 rows * 4 báo cáo * 2 chu kỳ (năm/quý) = ~1,200 rows/ticker → 12,000 records tổng cộng (<1MB).
-  - `company`: Tổng các file metadata dưới 100 rows/ticker → <1,000 records tổng cộng.
-- **Tổng dung lượng**: Dự kiến dưới `10 MB` cho raw data của 10 mã (rất nhỏ và dễ dàng xử lý).
-
-## 8. Crawling Strategy
-- **Chiến lược**: Batch crawl toàn bộ lịch sử từ đầu đến hiện tại.
+## 7. Crawling Strategy
+- **Chiến lược**: Batch crawl toàn bộ lịch sử từ đầu đến hiện tại đối với dữ liệu mới. Bỏ qua những file đã cào (`skip if exists`).
 - **Retry Logic**: Bọc mọi hàm fetch API bằng thư viện `tenacity`.
-  - Cơ chế: `wait_exponential(multiplier=1, min=2, max=10)`, retry tối đa 3 lần.
 - **Rate Limit Handling**: Bổ sung `time.sleep(1)` giữa mỗi nhóm API call của một ticker để tránh bị block.
-- **Fallback Logic**: Nếu `Company.events()` bằng KBS trả về rỗng, tự động gọi `Company.events()` bằng VCI.
-- **Checkpointing**: Trước khi fetch một file (VD: `events/FPT.parquet`), kiểm tra nếu file đã tồn tại trên disk thì bỏ qua (skip), giúp resume dễ dàng nếu quá trình bị crash.
 - **Logging**: Mọi trạng thái (Success, Skip, Error) phải được ghi nhận vào `logs/download_log.json` kèm theo record count.
