@@ -1,3 +1,12 @@
+---
+title: 02 - Cài Đặt & Cấu Hình
+tags:
+- vnstock
+- documentation
+aliases:
+- 02-installation
+---
+
 # 02 - Cài Đặt & Cấu Hình
 
 ## 📦 Yêu Cầu Hệ Thống
@@ -546,12 +555,12 @@ print(officers)
 ## 📚 Các Bước Tiếp Theo
 
 1. ✅ **Installation** - Bạn đã ở đây
-2. [01-Overview](01-overview.md) - Tổng quan thư viện
-3. [03-Listing API](03-listing-api.md) - Tìm kiếm chứng khoán
-4. [04-Quote & Price](04-quote-price-api.md) - Giá lịch sử & realtime
-5. [05-Financial API](05-financial-api.md) - Dữ liệu tài chính
-6. [06-Connector Guide](06-connector-guide.md) - API bên ngoài
-7. [07-Best Practices](07-best-practices.md) - Mẹo & kinh nghiệm
+2. [[01-overview]] - Tổng quan thư viện
+3. [[03-listing-api|03-Listing API]] - Tìm kiếm chứng khoán
+4. [[04-quote-price-api|04-Quote & Price]] - Giá lịch sử & realtime
+5. [[05-financial-api|05-Financial API]] - Dữ liệu tài chính
+6. [[06-connector-guide|06-Connector Guide]] - API bên ngoài
+7. [[07-best-practices|07-Best Practices]] - Mẹo & kinh nghiệm
 
 ---
 

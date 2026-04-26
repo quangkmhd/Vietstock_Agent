@@ -1,3 +1,12 @@
+---
+title: 04 - Company API - Thông Tin Công Ty
+tags:
+- vnstock
+- documentation
+aliases:
+- 04-company-api
+---
+
 # 04 - Company API - Thông Tin Công Ty
 
 ## 📖 Giới Thiệu
@@ -630,10 +639,10 @@ print(ratio_summary[['symbol', 'year_report', 'revenue', 'ebit']].head())
 
 ## 🔗 Xem Thêm
 
-- **[03-Listing API](03-listing-api.md)** - Tìm kiếm chứng khoán
-- **[05-Trading API](05-trading-api.md)** - Dữ liệu giao dịch
-- **[06-Financial API](06-financial-api.md)** - Dữ liệu tài chính
-- **[08-Best Practices](08-best-practices.md)** - Mẹo tối ưu hóa
+- **[[03-listing-api|03-Listing API]]** - Tìm kiếm chứng khoán
+- **[[05-trading-api|05-Trading API]]** - Dữ liệu giao dịch
+- **[[06-financial-api|06-Financial API]]** - Dữ liệu tài chính
+- **[[08-best-practices|08-Best Practices]]** - Mẹo tối ưu hóa
 
 ---
 

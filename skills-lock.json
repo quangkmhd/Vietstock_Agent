@@ -36,6 +36,21 @@
       "sourceType": "github",
       "computedHash": "2902e68071784c81597644309206b6b127e49b62a145cc9cbbbb73bfaeeeb86c"
     },
+    "obsidian-cli": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "computedHash": "f46ae626875f7e47c410c2ee93896c4526024ebe127719e8fb430261b5677edc"
+    },
+    "obsidian-markdown": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "computedHash": "cacc9058a35ad3fd4985b4c31121bff8202f1337c39808c1326ded6a19a7915f"
+    },
+    "obsidian-vault": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "computedHash": "960437c7c2febc15cf9d49964f0c8bd889d90a56e81b6eaa33f3ac5b594291c3"
+    },
     "prd": {
       "source": "github/awesome-copilot",
       "sourceType": "github",
@@ -70,6 +85,26 @@
       "source": "mattpocock/skills",
       "sourceType": "github",
       "computedHash": "8351452ad372ea4f839d3f7b951927b417851ffa49e7e6af28ea0f0ae111dca8"
+    },
+    "vnstock-env-setup": {
+      "source": "github/vnstock-hq/vnstock-agent-guide",
+      "sourceType": "github",
+      "computedHash": "84d4942aedb4b665f9cc109437a0b223b4020fa47579ac9da4087af72feddbbd"
+    },
+    "vnstock-migration-expert": {
+      "source": "github/vnstock-hq/vnstock-agent-guide",
+      "sourceType": "github",
+      "computedHash": "615adf98a53cc8e4ba0d6c65dfe6946e8712039a2dd1277304900141b05a3f54"
+    },
+    "vnstock-news-crawler": {
+      "source": "github/vnstock-hq/vnstock-agent-guide",
+      "sourceType": "github",
+      "computedHash": "c582ac6f20fb95bae4c4ddc2568189c91a25c96da0d85f3c653729cec97ecb4a"
+    },
+    "vnstock-solution-architect": {
+      "source": "github/vnstock-hq/vnstock-agent-guide",
+      "sourceType": "github",
+      "computedHash": "60a402fc39058fb18f28533020411f8ff351993c60b25cf63b66834f107eaf06"
     }
   }
 }

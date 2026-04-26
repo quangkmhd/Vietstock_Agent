@@ -1,3 +1,12 @@
+---
+title: Vnstock 3.5.1 - Tổng Quan Kiến Trúc & Dữ Liệu
+tags:
+- vnstock
+- documentation
+aliases:
+- 01-overview
+---
+
 # Vnstock 3.5.1 - Tổng Quan Kiến Trúc & Dữ Liệu
 
 **Phiên bản:** 3.5.1+  
@@ -97,7 +106,7 @@ Vnstock cung cấp các gói sử dụng khác nhau phù hợp với từng nhu 
     - Truy cập **vnstock_data** với dữ liệu nâng cao
     - Plan linh hoạt (hàng tháng hoặc quý)
     - Hỗ trợ cơ bản
-- **Tính năng nâng cao**: Xem [vnstock_data Overview](../vnstock-data/01-overview.md)
+- **Tính năng nâng cao**: Xem [[../vnstock-data/01-overview|vnstock_data Overview]]
 - **Tham gia**: https://vnstocks.com/insiders-program
 
 #### 4. **Silver** - Chức Năng Mở Rộng
@@ -108,7 +117,7 @@ Vnstock cung cấp các gói sử dụng khác nhau phù hợp với từng nhu 
     - Truy cập hầu hết chức năng nâng cao của vnstock_data
     - Plan quý (3 tháng)
     - Hỗ trợ ưu tiên
-- **Tính năng nâng cao**: Xem [vnstock_data Overview](../vnstock-data/01-overview.md)
+- **Tính năng nâng cao**: Xem [[../vnstock-data/01-overview|vnstock_data Overview]]
 - **Tham gia**: https://vnstocks.com/insiders-program
 
 #### 5. **Golden** - Toàn Bộ Chức Năng
@@ -119,7 +128,7 @@ Vnstock cung cấp các gói sử dụng khác nhau phù hợp với từng nhu 
     - Truy cập **tất cả** chức năng của bộ thư viện tài trợ
     - Plan 1 năm (cam kết lâu dài)
     - Hỗ trợ tối ưu & ưu đãi chi phí tốt nhất
-- **Tính năng nâng cao**: Xem [vnstock_data Overview](../vnstock-data/01-overview.md)
+- **Tính năng nâng cao**: Xem [[../vnstock-data/01-overview|vnstock_data Overview]]
 - **Tham gia**: https://vnstocks.com/insiders-program
 
 ### 📊 Rate Limit Chi Tiết
@@ -152,7 +161,7 @@ except RateLimitExceeded as e:
 
 Bắt đầu từ bản v3.5.1, nếu bạn đã cài đặt gói thư viện Sponsor `vnstock_data`, mã nguồn thư viện miễn phí `vnstock` sẽ tự động phát hiện bằng hàm `_check_sponsor_package` để cảnh báo bạn nâng cấp.
 
-Để nâng cấp dự án sang sử dụng đầy đủ các tính năng trong bản `vnstock_data` (sponsor) và giới hạn API được mở rộng, bạn có thể thực hiện di chuyển mã thủ công hoặc qua công cụ tự động của thư viện. Xem hướng dẫn di chuyển mã chi tiết tại [Hướng Dẫn Nâng Cấp (Migration Guide)](12-migration-guide.md). Các công cụ hỗ trợ như **AI Agents** có thể tự động chạy kịch bản `migrate_to_sponsor(target_dir=".")` để thay bạn hoàn tất việc kết nối phiên bản mới một cách tự động.
+Để nâng cấp dự án sang sử dụng đầy đủ các tính năng trong bản `vnstock_data` (sponsor) và giới hạn API được mở rộng, bạn có thể thực hiện di chuyển mã thủ công hoặc qua công cụ tự động của thư viện. Xem hướng dẫn di chuyển mã chi tiết tại [[12-migration-guide|Hướng Dẫn Nâng Cấp (Migration Guide)]]. Các công cụ hỗ trợ như **AI Agents** có thể tự động chạy kịch bản `migrate_to_sponsor(target_dir=".")` để thay bạn hoàn tất việc kết nối phiên bản mới một cách tự động.
 
 
 ---
@@ -785,14 +794,14 @@ quote = Quote(source="vci", symbol="VCB")
 
 ## 🔗 Bước Tiếp Theo
 
-1. **[02-Installation](02-installation.md)** - Cài đặt & cấu hình
-2. **[03-Listing API](03-listing-api.md)** - Tìm kiếm chứng khoán
-3. **[04-Quote & Price](04-quote-price-api.md)** - Giá lịch sử & realtime
-4. **[05-Financial API](05-financial-api.md)** - Dữ liệu tài chính
-5. **[06-Company API](06-company-api.md)** - Thông tin công ty
-6. **[07-Trading API](07-trading-api.md)** - Dữ liệu giao dịch
-7. **[11-Best Practices](11-best-practices.md)** - Mẹo & kinh nghiệm
-8. **[12-Migration Guide](12-migration-guide.md)** - Hướng dẫn nâng cấp thư viện
+1. **[[02-installation]]** - Cài đặt & cấu hình
+2. **[[03-listing-api|03-Listing API]]** - Tìm kiếm chứng khoán
+3. **[[04-quote-price-api|04-Quote & Price]]** - Giá lịch sử & realtime
+4. **[[05-financial-api|05-Financial API]]** - Dữ liệu tài chính
+5. **[[06-company-api|06-Company API]]** - Thông tin công ty
+6. **[[07-trading-api|07-Trading API]]** - Dữ liệu giao dịch
+7. **[[11-best-practices|11-Best Practices]]** - Mẹo & kinh nghiệm
+8. **[[12-migration-guide|12-Migration Guide]]** - Hướng dẫn nâng cấp thư viện
 
 ---
 

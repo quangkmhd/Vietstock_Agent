@@ -1,3 +1,12 @@
+---
+title: 06 - Connector Guide - API Bên Ngoài
+tags:
+- vnstock
+- documentation
+aliases:
+- 10-connector-guide
+---
+
 # 06 - Connector Guide - API Bên Ngoài
 
 ## 📖 Giới Thiệu
@@ -448,13 +457,13 @@ Error: No data available for this symbol/date range
 
 ## 📚 Bước Tiếp Theo
 
-1. [02-Installation](02-installation.md) - Cài đặt
-2. [01-Overview](01-overview.md) - Tổng quan
-3. [03-Listing API](03-listing-api.md) - Danh sách chứng khoán
-4. [04-Quote & Price](04-quote-price-api.md) - Giá lịch sử
-5. [05-Financial API](05-financial-api.md) - Dữ liệu tài chính
+1. [[02-installation]] - Cài đặt
+2. [[01-overview]] - Tổng quan
+3. [[03-listing-api|03-Listing API]] - Danh sách chứng khoán
+4. [[04-quote-price-api|04-Quote & Price]] - Giá lịch sử
+5. [[05-financial-api|05-Financial API]] - Dữ liệu tài chính
 6. ✅ **06-Connector Guide** - Bạn đã ở đây
-7. [07-Best Practices](07-best-practices.md) - Mẹo & kinh nghiệm
+7. [[07-best-practices|07-Best Practices]] - Mẹo & kinh nghiệm
 
 ---
 

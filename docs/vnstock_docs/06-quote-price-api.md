@@ -1,3 +1,12 @@
+---
+title: 06 - Quote & Price API - Giá Lịch Sử & Dữ Liệu Real-time
+tags:
+- vnstock
+- documentation
+aliases:
+- 06-quote-price-api
+---
+
 # 06 - Quote & Price API - Giá Lịch Sử & Dữ Liệu Real-time
 
 ## 📖 Giới Thiệu
@@ -407,10 +416,10 @@ print(df[['price', 'volume', 'buy_volume', 'sell_volume']].head())
 
 ## 🔗 Xem Thêm
 
-- **[03-Listing API](03-listing-api.md)** - Tìm kiếm chứng khoán
-- **[04-Company API](04-company-api.md)** - Thông tin công ty
-- **[05-Trading API](05-trading-api.md)** - Bảng giá giao dịch
-- **[08-Best Practices](08-best-practices.md)** - Mẹo tối ưu hóa
+- **[[03-listing-api|03-Listing API]]** - Tìm kiếm chứng khoán
+- **[[04-company-api|04-Company API]]** - Thông tin công ty
+- **[[05-trading-api|05-Trading API]]** - Bảng giá giao dịch
+- **[[08-best-practices|08-Best Practices]]** - Mẹo tối ưu hóa
 
 ---
 

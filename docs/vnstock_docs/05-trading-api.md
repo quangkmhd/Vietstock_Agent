@@ -1,3 +1,12 @@
+---
+title: 05 - Trading API - Dữ Liệu Giao Dịch
+tags:
+- vnstock
+- documentation
+aliases:
+- 05-trading-api
+---
+
 # 05 - Trading API - Dữ Liệu Giao Dịch
 
 ## 📖 Giới Thiệu
@@ -281,13 +290,13 @@ print(change_dist)
 
 ## 📚 Bước Tiếp Theo
 
-1. [02-Installation](02-installation.md) - Cài đặt
-2. [01-Overview](01-overview.md) - Tổng quan
-3. [03-Listing API](03-listing-api.md) - Danh sách mã
-4. [04-Company API](04-company-api.md) - Thông tin công ty
+1. [[02-installation]] - Cài đặt
+2. [[01-overview]] - Tổng quan
+3. [[03-listing-api|03-Listing API]] - Danh sách mã
+4. [[04-company-api|04-Company API]] - Thông tin công ty
 5. ✅ **05-Trading API** - Bạn đã ở đây
-6. [06-Quote & Price](06-quote-price-api.md) - Giá lịch sử
-7. [07-Financial API](07-financial-api.md) - Dữ liệu tài chính
+6. [[06-quote-price-api|06-Quote & Price]] - Giá lịch sử
+7. [[07-financial-api|07-Financial API]] - Dữ liệu tài chính
 
 ---
 

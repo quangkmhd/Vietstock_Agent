@@ -1,3 +1,12 @@
+---
+title: 07 - Financial API - Dữ Liệu Tài Chính
+tags:
+- vnstock
+- documentation
+aliases:
+- 07-financial-api
+---
+
 # 07 - Financial API - Dữ Liệu Tài Chính
 
 ## 📖 Giới Thiệu
@@ -799,18 +808,18 @@ else:
 
 ## 📚 Bước Tiếp Theo
 
-1. [02-Installation](02-installation.md) - Cài đặt
-2. [01-Overview](01-overview.md) - Tổng quan
-3. [03-Listing API](03-listing-api.md) - Danh sách chứng khoán
-4. [04-Company API](04-company-api.md) - Thông tin công ty
-5. [05-Trading API](05-trading-api.md) - Dữ liệu giao dịch
-6. [06-Quote & Price API](06-quote-price-api.md) - Giá lịch sử
+1. [[02-installation]] - Cài đặt
+2. [[01-overview]] - Tổng quan
+3. [[03-listing-api|03-Listing API]] - Danh sách chứng khoán
+4. [[04-company-api|04-Company API]] - Thông tin công ty
+5. [[05-trading-api|05-Trading API]] - Dữ liệu giao dịch
+6. [[06-quote-price-api|06-Quote & Price API]] - Giá lịch sử
 7. ✅ **07-Financial API** - Bạn đã ở đây
-8. [08-Fund API](08-fund-api.md) - Dữ liệu quỹ
-9. [09-Screener API](09-screener-api.md) - Lọc cổ phiếu
-10. [10-Connector Guide](10-connector-guide.md) - API bên ngoài
-11. [11-Best Practices](11-best-practices.md) - Mẹo & kinh nghiệm
-12. [12-Migration Guide](12-migration-guide.md) - Nâng cấp vnstock_data
+8. [[08-fund-api|08-Fund API]] - Dữ liệu quỹ
+9. [[09-screener-api|09-Screener API]] - Lọc cổ phiếu
+10. [[10-connector-guide|10-Connector Guide]] - API bên ngoài
+11. [[11-best-practices|11-Best Practices]] - Mẹo & kinh nghiệm
+12. [[12-migration-guide|12-Migration Guide]] - Nâng cấp vnstock_data
 
 ## 📋 Tóm Tắt Thay Đổi Phiên Bản
 

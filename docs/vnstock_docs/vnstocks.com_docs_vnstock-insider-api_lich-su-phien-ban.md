@@ -120,14 +120,14 @@ title: "Lịch sử phiên bản | Vnstock"
   - Dữ liệu được **tự động chuẩn hóa (Normalization)** từ nhiều nguồn khác nhau về một định dạng duy nhất, giúp việc tính toán và phân tích nhất quán hơn.
   - Cơ chế **Lọc tham số (Kwargs Filtering)**: Giúp giảm thiểu lỗi runtime khi bạn vô tình truyền thừa tham số, tăng tính ổn định cho chương trình.
   - Tối ưu hóa tốc độ tải dữ liệu và cấu trúc nội bộ để sẵn sàng cho các bài toán phân tích dữ liệu lớn.
-- **Cập nhật Vnstock Agent Guide**: Tài liệu hướng dẫn chi tiết và các quy tắc cho AI Agent trong lập trình tự động được cập nhật qua Agent Guide [tại đây](https://github.com/vnstock-hq/vnstock-agent-guide/blob/main/docs/vnstock-data/14-unified-ui.md)
+- **Cập nhật Vnstock Agent Guide**: Tài liệu hướng dẫn chi tiết và các quy tắc cho AI Agent trong lập trình tự động được cập nhật qua Agent Guide [[https://github.com/vnstock-hq/vnstock-agent-guide/blob/main/docs/vnstock-data/14-unified-ui|tại đây]]
 
 
 * * *
 
 ## 05-03-2026
 
-- **Cập nhật module Unified UI (U2)**: Cập nhật các lớp UI cung cấp cấu trúc lệnh hợp nhất với phân nhóm chặt chẽ lấy cảm hứng từ chuẩn FIX và Bloomberg Terminal giúp điều hướng dễ dàng theo mặc định do Vnstock thiết kế và người dùng không cần cài đặt nguồn dữ liệu. Tài liệu hướng dẫn chi tiết được cập nhật qua Agent Guide [tại đây](https://github.com/vnstock-hq/vnstock-agent-guide/blob/main/docs/vnstock-data/14-unified-ui.md)
+- **Cập nhật module Unified UI (U2)**: Cập nhật các lớp UI cung cấp cấu trúc lệnh hợp nhất với phân nhóm chặt chẽ lấy cảm hứng từ chuẩn FIX và Bloomberg Terminal giúp điều hướng dễ dàng theo mặc định do Vnstock thiết kế và người dùng không cần cài đặt nguồn dữ liệu. Tài liệu hướng dẫn chi tiết được cập nhật qua Agent Guide [[https://github.com/vnstock-hq/vnstock-agent-guide/blob/main/docs/vnstock-data/14-unified-ui|tại đây]]
 
 - **Bổ sung hàm lấy thông tin Chứng quyền và hợp đồng tương lai**:
   - Cung cấp hàm trong giao diện U2 để lấy thông tin chứng quyền và hợp đồng tương lai thông qua Reference().derivatives().warrant() và Reference().derivatives().futures()
@@ -137,11 +137,11 @@ title: "Lịch sử phiên bản | Vnstock"
   - Bổ sung method `interest_rate` để lấy dữ liệu Lãi suất bình quân & Doanh số trên thị trường liên ngân hàng. Hỗ trợ tham số `format='pivot'` (mặc định) để trả về bảng dạng nhóm cột (MultiIndex giống biểu diễn trên website) hoặc `format='long'` để trả về định dạng phẳng (raw format).
   - Tích hợp thêm tham số khoảng thời gian tương đối `length` (ví dụ: `90`, `1Y`, `30D`, `100b`) tương tự như cách sử dụng trong `quote.history`. Tính năng này áp dụng đồng bộ cho tất cả các hàm vĩ mô (`gdp`, `cpi`, `interest_rate`, `exchange_rate` v.v...) để bỏ qua việc nhập ngày bắt đầu `start` và kết thúc `end`.
   - Thay đổi thời gian lấy dữ liệu mặc định ( _khi không cung cấp `start`, `end`, hoặc `length`_) là 1 năm (`1Y`) để trả về thông tin ở khoảng thời gian phù hợp và nhẹ.
-  - Tài liệu hướng dẫn chi tiết được cập nhật qua Agent Guide [tại đây](https://github.com/vnstock-hq/vnstock-agent-guide/blob/main/docs/vnstock-data/09-macro.md)
+  - Tài liệu hướng dẫn chi tiết được cập nhật qua Agent Guide [[https://github.com/vnstock-hq/vnstock-agent-guide/blob/main/docs/vnstock-data/09-macro|tại đây]]
 - **Cải thiện trải nghiệm sử dụng module lấy dữ liệu hàng hoá**:
   - Tích hợp khả năng lấy thời gian tương đối thông qua tham số `length` tương tự như module `macro` và `quote.history`.
   - Thay đổi thời gian lấy dữ liệu mặc định ( _khi không cung cấp `start`, `end`, hoặc `length`_) về 1 năm (`1Y`) thay vì lấy toàn bộ lịch sử như trước đây.
-  - Tài liệu hướng dẫn chi tiết được cập nhật qua Agent Guide [tại đây](https://github.com/vnstock-hq/vnstock-agent-guide/blob/main/docs/vnstock-data/10-commodity.md)
+  - Tài liệu hướng dẫn chi tiết được cập nhật qua Agent Guide [[https://github.com/vnstock-hq/vnstock-agent-guide/blob/main/docs/vnstock-data/10-commodity|tại đây]]
 
 ## 31-01-2026
 

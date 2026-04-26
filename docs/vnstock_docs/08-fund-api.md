@@ -1,3 +1,12 @@
+---
+title: 07 - Fund API - Dữ Liệu Quỹ Đầu Tư
+tags:
+- vnstock
+- documentation
+aliases:
+- 08-fund-api
+---
+
 # 07 - Fund API - Dữ Liệu Quỹ Đầu Tư
 
 ## 📖 Giới Thiệu
@@ -191,8 +200,8 @@ print(top_picks[[
 
 ## 🔗 Xem Thêm
 
-- **[02-Installation](02-installation.md)** - Cài đặt
-- **[08-Best Practices](08-best-practices.md)** - Mẹo tối ưu hóa
+- **[[02-installation]]** - Cài đặt
+- **[[08-best-practices|08-Best Practices]]** - Mẹo tối ưu hóa
 
 ---
 

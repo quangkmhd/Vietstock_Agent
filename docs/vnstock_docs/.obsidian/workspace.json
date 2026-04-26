@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "2d94c1d594c5d008",
+    "type": "split",
+    "children": [
+      {
+        "id": "602522b104f71483",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d36d9bde5e935de4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vnstocks.com_docs_vnstock-pipeline_tuy-chinh-pipeline.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vnstocks.com_docs_vnstock-pipeline_tuy-chinh-pipeline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "db56c5e704818694",
+    "type": "split",
+    "children": [
+      {
+        "id": "68fbb1aa9611729e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "241dc746e61fbc69",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a0080d077ddbf5dc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "14f38bc30367f1cd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9a88d270ac792346",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec79d92cd293e4d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0ae25817d18dfbe2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "vnstocks.com_docs_vnstock-pipeline_tuy-chinh-pipeline.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for vnstocks.com_docs_vnstock-pipeline_tuy-chinh-pipeline"
+            }
+          },
+          {
+            "id": "156430a2d835b56f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "vnstocks.com_docs_vnstock-pipeline_tuy-chinh-pipeline.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from vnstocks.com_docs_vnstock-pipeline_tuy-chinh-pipeline"
+            }
+          },
+          {
+            "id": "f81ca6a9fc6023da",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "880eb6cf3da50735",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "c88518ff5cdb6912",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "vnstocks.com_docs_vnstock-pipeline_tuy-chinh-pipeline.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of vnstocks.com_docs_vnstock-pipeline_tuy-chinh-pipeline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "d36d9bde5e935de4",
+  "lastOpenFiles": [
+    "vnstocks.com_docs_vnstock-pipeline_luu-tru-du-lieu-toi-uu.md",
+    "vnstocks.com_docs_vnstock-pipeline_hieu-nang-toi-uu.md",
+    "vnstocks.com_docs_vnstock-news_tuy-bien-nang-cao.md",
+    "vnstocks.com_docs_vnstock-news_vi-du-thuc-te.md",
+    "vnstocks.com_docs_vnstock-news_huong-dan-co-ban.md",
+    "vnstocks.com_docs_vnstock_thong-tin-niem-yet.md",
+    "10-connector-guide.md",
+    "Vnstock Index.md"
+  ]
+}

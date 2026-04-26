@@ -31,6 +31,7 @@ If maintaining or migrating older codebase segments, refer to these earlier file
 
 * **01 - 12 General Guides:** `01-overview.md`, `02-installation.md`, `10-connector-guide.md`, `11-best-practices.md`, `12-migration-guide.md`
 * **V2 API Domains:**
+  * **Tổng hợp các trường dữ liệu Miễn phí:** `vnstock_free_data_fields.md` (Tra cứu các trường dữ liệu có sẵn để tải về)
   * Listing API: `03-listing-api.md`, `vnstocks.com_docs_vnstock_thong-tin-niem-yet.md`
   * Company API: `04-company-api.md`, `vnstocks.com_docs_vnstock_thong-tin-cong-ty.md`
   * Trading / Prices: `05-trading-api.md`, `06-quote-price-api.md`, `vnstocks.com_docs_vnstock_thong-ke-gia-lich-su.md`, `vnstocks.com_docs_vnstock_bang-gia-giao-dich.md`
